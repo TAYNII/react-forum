@@ -16,7 +16,7 @@ const Body = ({details, comments}) => {
               </p>
             </article>
             </fieldset>
-            <ul>
+            <div className={style.card}>
               
             {comments.map((comment,i) => {
               return(<div className={style.commentsHolder} key={i}>
@@ -37,7 +37,7 @@ const Body = ({details, comments}) => {
               </div>)
             })}
 
-            </ul>
+            </div>
 
             
             <Link to="/"><button>Go back!</button></Link>
