@@ -4,9 +4,9 @@ import style from "./postList.module.scss"
 
 
 const PostList = ({posts}) => {
-  return <div className={style.container}>
-                        {posts.map((post) => {
-                    return <div className={style.postHolder}><Link className={style.link} key={post.id} to={{
+  return <div  className={style.container}>
+                        {posts.map((post, i) => {
+                    return <div key={i} className={style.postHolder}><Link className={style.link} key={post.id} to={{
                     pathname:`/post/${post.id}`,
                     details: {...post}
                     }}>

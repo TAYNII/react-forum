@@ -3,12 +3,12 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: linear-gradient(0deg, rgba(254,146,159,1) 38%, rgba(253,173,162,1) 76%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 

@@ -20,19 +20,14 @@ const Body = ({details, comments}) => {
               
             {comments.map((comment,i) => {
               return(<div className={style.commentsHolder} key={i}>
-                <div className={style.userInfo}>
-                  <div className={style.commentsUsername}>
-                    <div className={style.imgHolder}>
-                      <img className={style.img} src="https://picsum.photos/200" alt="" />
-                    </div >
-                    <small className={style.align}>username:{comment.name}</small>
-                  </div>
-                  <div>
-                    <small>{comment.email}</small> 
-                  </div>
-                </div>
                 <div className={style.comment}>
                   <p className={style.commentBody}>{comment.body}</p>
+                </div>
+                <div className={style.userInfo}>
+                  <div className={style.commentsUsername}>
+                    <small className={style.align}>Username: {comment.name}</small>
+                    <small className={style.align}>{comment.email}</small> 
+                  </div>
                 </div>
               </div>)
             })}
@@ -40,7 +35,7 @@ const Body = ({details, comments}) => {
             </div>
 
             
-            <Link to="/"><button>Go back!</button></Link>
+            <Link to="/"><button className={style.button}>Go back</button></Link>
           </div>
         );
     } else {
